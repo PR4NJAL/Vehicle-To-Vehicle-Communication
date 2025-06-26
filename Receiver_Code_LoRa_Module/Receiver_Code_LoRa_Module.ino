@@ -120,6 +120,14 @@ void loop() {
       Serial.print("Fog Detected ");
       beep();
       delay(2000);
+    }
+    else if (receivedData == "I") {
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("Animal Detected");
+      Serial.println("Animal Detected");
+      beep();
+      delay(2000);
     } else {
       // Unknown data
     }
